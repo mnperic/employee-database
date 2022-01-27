@@ -9,7 +9,6 @@ DROP TABLE IF EXISTS titles;
 
 -- Create tables
 -- Import .csv files
-
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(50)   NULL,
     "dept_name" VARCHAR(50)   NULL,
@@ -68,11 +67,3 @@ REFERENCES "salaries" ("emp_no");
 
 ALTER TABLE "employees" ADD CONSTRAINT "fk_employees_emp_title_id" FOREIGN KEY("emp_title_id")
 REFERENCES "titles" ("titles_id");
-
--- Query * FROM each table to confirm data
-SELECT * FROM departments;
-SELECT * FROM dept_emp;
-SELECT * FROM dept_manager;
-SELECT * FROM employees;
-SELECT * FROM salaries;
-SELECT * FROM titles;
